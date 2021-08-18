@@ -16,7 +16,7 @@ I invite everyone to check out my new project at **[ssr.motzel.dev](https://ssr.
 It is still in the early stages of development, but will eventually include most, if not all, features of SSCL.
 
 # Userscript installation
-Get Tampermonkey for [Chrome/Edge Chromium](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) or [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/). Then install the script from [here](https://github.com/motzel/ScoreSaberCountryLeaderboard/raw/master/dist/scoresaber-country-leaderboard.user.js).
+Get Tampermonkey for [Chrome/Edge Chromium](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) or [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/). Then install the script from [here](https://github.com/Omurky/ScoreSaberCountryLeaderboard/raw/master/dist/scoresaber-country-leaderboard.user.js).
 
 # Quickstart
 

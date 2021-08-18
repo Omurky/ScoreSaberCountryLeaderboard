@@ -12,7 +12,7 @@ import {arrayUnique, convertArrayToObjectByKey} from "../utils/js";
 import {getMainPlayerId} from "../plugin-config";
 import {getPlayerName, isEasterEggDay} from '../eastereggs'
 
-export const isCountryPlayer = (u, country) => u && u.id && !!u.ssplCountryRank && !!u.ssplCountryRank[country] && (getAdditionalPlayers(country).includes(u.id) || (country && u.country.toLowerCase() === country.toLowerCase()));
+export const isCountryPlayer = (u, country) => u && u.id && country && u.country.toLowerCase() === country.toLowerCase();
 
 export const getActiveCountryPlayers = async (country, withMain = true) => {
     const players = await getPlayers() ?? {};
