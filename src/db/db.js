@@ -4,7 +4,7 @@ import {isDateObject} from '../utils/js'
 import {updateSongCountryRanks} from '../song'
 import eventBus from '../utils/broadcast-channel-pubsub'
 
-const SSPL_DB_VERSION = 4;
+const SSPL_DB_VERSION = 5;
 export let db = null;
 
 import cacheRepository from './repository/cache';
@@ -117,7 +117,14 @@ async function openDatabase() {
             });
             songsBeatMapsStore.createIndex('songs-beatmaps-key', 'key', {unique: true});
 
-          // NO break here
+          // NO break here!
+
+          case newVersion >= 5 && oldVersion < 5:
+            const songsBeatMapsStoreV2 = transaction.objectStore('songs-beatmaps');
+            songsBeatMapsStoreV2.deleteIndex('songs-beatmaps-key');
+            songsBeatMapsStoreV2.createIndex('songs-beatmaps-key', 'key', {unique: false});
+
+          // NO break here!
         }
 
         log.info("Database converted");
